@@ -1,20 +1,39 @@
-*.egg-info
+```dockerignore
+# ============================================================
+# Metadados e artefatos de pacotes Python
+# ============================================================
+
+# Metadados de distribuição
+*.egg-info/
+.eggs/
+*.egg
+
+# Pacotes compilados
+*.whl
+
+# Arquivos de catálogo de mensagens
 *.pot
-*.py[co]
-.tox/
-.cache
-.config
+
+# Bytecode Python
+*.py[cod]
+*$py.class
+
+# Cache e arquivos temporários
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Ambientes virtuais
 .venv/
-.env
-.replit
-.upm
-.pytest_cache
-.mypy_cache
 venv/
-dist/
+env/
+ENV/
+
+# Diretórios de build e distribuição
 build/
-env
-replit.nix
-replit_zip_error_log.txt
-poetry.lock
-__pycache__
+dist/
+wheels/
+pip-wheel-metadata/
+```
