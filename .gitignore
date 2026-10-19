@@ -1,39 +1,115 @@
-```dockerignore
 # ============================================================
-# Metadados e artefatos de pacotes Python
+# Controle de versão
 # ============================================================
 
-# Metadados de distribuição
-*.egg-info/
-.eggs/
-*.egg
+.git
+.gitignore
+.gitattributes
 
-# Pacotes compilados
-*.whl
+# ============================================================
+# Python
+# ============================================================
 
-# Arquivos de catálogo de mensagens
-*.pot
-
-# Bytecode Python
+__pycache__/
 *.py[cod]
 *$py.class
 
-# Cache e arquivos temporários
-__pycache__/
+# Artefatos de build
+build/
+dist/
+wheels/
+pip-wheel-metadata/
+
+# Empacotamento
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+
+# ============================================================
+# Testes e qualidade
+# ============================================================
+
 .pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
 .mypy_cache/
 .ruff_cache/
-.cache/
+.pyre/
+.tox/
+.nox/
 
+# ============================================================
 # Ambientes virtuais
+# ============================================================
+
 .venv/
 venv/
 env/
 ENV/
 
-# Diretórios de build e distribuição
-build/
-dist/
-wheels/
-pip-wheel-metadata/
-```
+# ============================================================
+# Logs e temporários
+# ============================================================
+
+*.log
+*.out
+*.err
+*.pid
+
+tmp/
+temp/
+
+# ============================================================
+# Variáveis de ambiente e segredos
+# ============================================================
+
+.env
+.env.*
+*.env
+
+# ============================================================
+# IDEs e editores
+# ============================================================
+
+.vscode/
+.idea/
+.vs/
+
+*.iml
+*.swp
+*.swo
+*~
+
+.history/
+
+# ============================================================
+# Jupyter
+# ============================================================
+
+.ipynb_checkpoints/
+
+# ============================================================
+# Banco de dados local
+# ============================================================
+
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================================
+# Docker
+# ============================================================
+
+docker-compose.override.yml
+docker-compose.*.local.yml
+
+# ============================================================
+# Sistema operacional
+# ============================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
